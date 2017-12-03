@@ -5,4 +5,9 @@
 To learn about Advent of Code, check it out [here][adventofcode].
 
 
+## To Do
+
+Add `stdin` support to day 1.
+
+
 [adventofcode]: https://adventofcode.com
