@@ -11,7 +11,7 @@ def try_to_int(val):
         return
 
 def spreadsheet_line(line, sep="\t"):
-    numbers = list(filter(lambda x: x != None, map(try_to_int, line.split(sep))))
+    numbers = list(filter(lambda x: x != None, map(try_to_int, line.strip().split(sep))))
     length = len(numbers)
     print(numbers)
     try:
@@ -40,5 +40,5 @@ def checksum(spreadsheet_text, line_sep="\n"):
     return total
 
 if __name__ == "__main__":
-    print(checksum(sys.stdin.read()))
+    print(checksum(sys.stdin.read()).strip())
 

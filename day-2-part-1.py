@@ -7,7 +7,7 @@ import sys
 def spreadsheet_line(line, sep="\t"):
     highest = -sys.maxsize
     lowest = sys.maxsize
-    numbers = map(int, line.split(sep))
+    numbers = map(int, line.strip().split(sep))
     try:
         for x in numbers:
             if x < lowest:
@@ -31,5 +31,5 @@ def checksum(spreadsheet_text, line_sep="\n"):
     return total
 
 if __name__ == "__main__":
-    print(checksum(sys.stdin.read()))
+    print(checksum(sys.stdin.read()).strip())
 
